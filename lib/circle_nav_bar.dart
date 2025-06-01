@@ -261,8 +261,7 @@ class _CircleNavBarState extends State<CircleNavBar>
               int currentIndex = widget.inactiveIcons.indexOf(e);
               bool isActive = widget.activeIndex == currentIndex;
               return Expanded(
-                child: GestureDetector(
-                  behavior: HitTestBehavior.translucent,
+                child: InkWell(
                   onTap: () => widget.onTap?.call(currentIndex),
                   child: Column(
                     mainAxisAlignment: widget.levels != null &&
